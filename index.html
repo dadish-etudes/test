@@ -4,10 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Redirecting...</title>
+  <title>Brave</title>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .logo-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello there!</h1>
+  <img class="logo-img" src="logo.png" alt="PantaPasen" />
   <script>
     // https://stackoverflow.com/questions/21741841/detecting-ios-android-operating-system#21742107
     /**
@@ -44,7 +61,7 @@
       } else if (os === 'Android') {
         redirectUrl = 'market://details?id=com.brave.browser';
       } else {
-        redirectUrl = 'http://www.pantapasen.se';
+        redirectUrl = 'https://brave.com/';
       }
       document.location.replace(redirectUrl);
     }
