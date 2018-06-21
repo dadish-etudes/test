@@ -37,11 +37,16 @@
     }
 
     function redirectToStore () {
-      var appStoreUrl = 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8';
+      var redirectUrl;
       var os = getMobileOperatingSystem();
       if (os === 'iOS') {
-        document.location.replace(appStoreUrl);
+        redirectUrl = 'https://itunes.apple.com/us/app/brave-browser-fast-adblocker/id1052879175?mt=8';
+      } else if (os === 'Android') {
+        redirectUrl = 'https://play.google.com/store/apps/details?id=com.brave.browser';
+      } else {
+        redirectUrl = 'http://www.pantapasen.se';
       }
+      document.location.replace(redirectUrl);
     }
 
     redirectToStore();
